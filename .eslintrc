@@ -1,0 +1,29 @@
+{
+  "extends": ["airbnb-base", "prettier"],
+  "rules": {
+    "no-console": "off", // Allow console statements
+    "quotes": ["warn", "single"], // Warn for non-single quotes
+    "prefer-const": "error" // Require const for variables that are not reassigned
+  },
+
+  "overrides": [
+    {
+      "files": ["webpack.*.js"],
+      "rules": {
+        "import/extensions": [
+          "error",
+          "always",
+          {
+            "js": "never"
+          }
+        ],
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true
+          }
+        ]
+      }
+    }
+  ]
+}
